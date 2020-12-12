@@ -1,0 +1,200 @@
+.mainHeading, .header__content h1, .need h2, .services h2, .download h2, .touch h2 {
+  font-size: 4.8rem;
+  color: #fff; }
+  .mainHeading::after, .header__content h1::after, .need h2::after, .services h2::after, .download h2::after, .touch h2::after {
+    content: "";
+    background-color: #f05f40;
+    width: 3rem;
+    height: 0.4rem;
+    display: block;
+    margin: 1rem auto; }
+
+.mainText, .need p {
+  margin: 1rem 0;
+  color: #191b1d;
+  letter-spacing: 0.3rem;
+  line-height: 1.5;
+  font-size: 1.6rem; }
+
+.mainButton, .header__content button, .need button, .download button {
+  background-color: #f05f40;
+  border: none;
+  color: #fff;
+  border-radius: 5rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.5s; }
+  .mainButton:hover, .header__content button:hover, .need button:hover, .download button:hover {
+    background-color: #fff;
+    color: #f05f40; }
+
+.section {
+  text-align: center;
+  padding: 4rem 0; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: Arial, serif;
+  font-size: 10px; }
+
+.container {
+  width: 90%;
+  margin: auto; }
+
+h3 {
+  font-size: 2rem; }
+
+p {
+  font-size: 1.6rem; }
+
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+  background-color: rgba(25, 27, 29, 0.6); }
+  .nav__content {
+    display: flex;
+    align-items: center; }
+    .nav__content .nav__logo {
+      flex: 1;
+      color: #c9c5bd;
+      font-size: 1.6rem; }
+  .nav .nav__links {
+    display: flex;
+    flex: 1;
+    list-style: none; }
+    .nav .nav__links li {
+      padding: 1.5rem 2rem;
+      font-size: 1.4rem; }
+      .nav .nav__links li a {
+        text-decoration: none;
+        color: #c9c5bd;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.5s; }
+        .nav .nav__links li a:hover {
+          color: #f05f40; }
+  @media (max-width: 768px) {
+    .nav {
+      position: static; }
+      .nav__content {
+        flex-direction: column;
+        align-items: flex-start; }
+      .nav .nav__links {
+        display: block; } }
+
+.header {
+  height: 100vh;
+  background: no-repeat linear-gradient(rgba(25, 27, 29, 0.6), rgba(25, 27, 29, 0.6)), url("../img/home-bg.jpg") fixed;
+  background-size: cover;
+  text-align: center;
+  position: relative; }
+  .header__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.need {
+  background-color: #f05f40; }
+  .need h2 {
+    font-size: 3.2rem; }
+    .need h2::after {
+      background-color: #fff; }
+  .need p {
+    color: #fff; }
+  .need button {
+    background-color: #fff;
+    color: #f05f40; }
+    .need button:hover {
+      background-color: #191b1d;
+      color: #fff; }
+
+.services h2 {
+  color: #191b1d;
+  font-size: 3.2rem; }
+
+.services__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  grid-gap: 1.5rem;
+  margin: 1.5rem 0; }
+
+.services__item h3 {
+  margin: 1rem 0;
+  color: #333; }
+
+.services__item p {
+  color: #a4a4a4;
+  line-height: 1.2; }
+
+.services__item i {
+  color: #f05f40; }
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 0; }
+  .portfolio div {
+    position: relative;
+    overflow: hidden; }
+    .portfolio div img {
+      display: inline-block;
+      width: 100%;
+      vertical-align: bottom;
+      transition: all cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.5s; }
+    .portfolio div:hover img {
+      transform: scale(1.1); }
+    .portfolio div:hover::before {
+      opacity: 0.7; }
+    .portfolio div::before {
+      content: "";
+      transition: all cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.5s;
+      background-color: #f05f40;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+  @media (max-width: 768px) {
+    .portfolio {
+      grid-template-columns: repeat(2, 1fr); } }
+
+.download {
+  background-color: #191b1d; }
+  .download h2 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem; }
+    .download h2::after {
+      display: none; }
+  .download button {
+    background-color: #fff;
+    color: #191b1d; }
+    .download button:hover {
+      color: #fff;
+      background-color: #f05f40; }
+
+.touch h2 {
+  color: #191b1d;
+  font-size: 3.2rem; }
+
+.touch__items {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-evenly; }
+  .touch__items i {
+    margin-bottom: 1rem; }
+  .touch__items p {
+    color: #a4a4a4;
+    line-height: 1.2; }

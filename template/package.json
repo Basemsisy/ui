@@ -1,0 +1,15 @@
+{
+  "name": "ui-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass -w scss/ -o dist/css --recursive",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BasemElsisy",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
